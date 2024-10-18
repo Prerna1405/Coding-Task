@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest Number</title>
+</head>
+<body>
+    <script src="script.js"></script>
+    <script>
+        var array=[10,20,30,50,60,80,70];
+        <!-- document.writeln(array.length) -->
+        array.sort((a,b)=>b-a)
+        {
+            document.writeln("Array: "+array[1])
+         
+        }
+        class ArrayOperations {
+            constructor() {
+                this.array = []; 
+            }
+        
+            getInput() {
+                const array_size = Number(prompt("Enter The Array Size: "));
+                for (let i = 0; i < array_size; i++) {
+                    this.array[i] = Number(prompt("Enter The Element " + (i + 1))); 
+                    document.writeln("Element " + (i + 1) + ": " + this.array[i] + "<br>"); 
+                }
+            }
+        
+        
+            findLargest() {
+                if (this.array.length === 0) {
+                    document.writeln("The array is empty.");
+                    return null; 
+                }
+                const largest = this.array.sort((a, b) => b - a); 
+                document.writeln("The Largest Value is: " + largest); 
+                return largest; 
+            }
+        }
+        
+        // Creating an object of the ArrayOperations class
+        const arrayOps = new ArrayOperations();
+        arrayOps.getInput(); 
+        arrayOps.findLargest(); 
+
+   
+   
+
+    </script>
+</body>
+</html>
