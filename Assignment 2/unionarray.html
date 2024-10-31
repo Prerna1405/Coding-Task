@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getarray() {
+            let input=prompt("Enter the number of array separted by comma");
+              return input.split(',').map(item => item.trim());
+        }
+        let array1=getarray();
+        let array2=getarray();
+        let result = [...array1, ...array2];
+
+        // Create a Set to remove duplicates and convert it back to an array
+        let Unionset = [...new Set(result)];
+        let Union=Unionset.sort((a,b)=>a-b);
+       console.log(Union);
+      
+    </script>
+</body>
+</html>
